@@ -108,7 +108,7 @@ ____
 #### 2. Live Speech to Text
 
     import SpeechKitManager
-##### Step 1: As permission to access speech recognition to user
+##### Step 1: Ask permission to access speech recognition to user
 
     fileprivate var skManager:SpeechKitManager?
         
@@ -132,22 +132,31 @@ ____
             })
         }
         
-##### Step 2: Record live audio and get speech in text format
-    fileprivate func recordAudio(){
-            skManager?.record(resultHandler: { (result, error) in
-                var isFinal = false
-                
-                if let result = result {
-                    //User speech will fall here to text
-                    debugPrint(result.bestTranscription.formattedString)
-                    isFinal = result.isFinal
-                }
-                
-                if error != nil || isFinal {
-                    self.skManager?.stop()
+##### Step 2: Ask permission to access microphone to user
+    skManager?.requestMicAuth({ (granted) in
+                if granted{
+                    self.recognize()
+                }else{
+                    debugPrint("Microphone permission required")
                 }
             })
-        }
+
+##### Step 3: Record live audio and get speech in text format
+    fileprivate func recordAudio(){
+            skManager?.record(resultHandler: { (result, error) in
+            var isFinal = false
+            
+            if let result = result {
+                //User speech will fall here to text
+                debugPrint(result.bestTranscription.formattedString)
+                isFinal = result.isFinal
+            }
+            
+            if error != nil || isFinal {
+                self.speechKitManager?.stop()
+            }
+        })
+     }
         
 ## Author
 
