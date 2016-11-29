@@ -12,7 +12,7 @@ import SpeechKitManager
 class AudioToTextVC: UIViewController {
 
     @IBOutlet weak var IBtxtView: UITextView!
-    let audioPath = Bundle.main.path(forResource: "Smooth", ofType: "m4a")
+    let audioPath = Bundle.main.path(forResource: "testAudio", ofType: "m4a")
     var audioURL:URL?
     fileprivate var speechKitManager:SpeechKitManager?
     
@@ -59,6 +59,8 @@ class AudioToTextVC: UIViewController {
                         self.speechKitManager?.recognizeAudio(atURL: URL(fileURLWithPath: path), resultHandler: { (result, error) in
                             if let result = result{
                                 self.IBtxtView.text = result.bestTranscription.formattedString
+                            }else if let error = error{
+                                debugPrint(error.localizedDescription)
                             }
                         })
                     }else{

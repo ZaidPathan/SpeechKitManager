@@ -18,6 +18,7 @@
 		FC21D8E81DED6CBA0059D1DF /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21D8E51DED6CBA0059D1DF /* AwesomeButton.swift */; };
 		FC21D8E91DED6CBA0059D1DF /* SpeechToTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21D8E61DED6CBA0059D1DF /* SpeechToTextVC.swift */; };
 		FC21D8EB1DED6CE30059D1DF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21D8EA1DED6CE30059D1DF /* MainVC.swift */; };
+		FC4FD0281DEDADC90087BE9E /* testAudio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FC4FD0271DEDADC90087BE9E /* testAudio.m4a */; };
 		FC7F84AC1DEC67BA00C2C8B3 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7F84AB1DEC67BA00C2C8B3 /* Speech.framework */; };
 		FC7F84B01DEC681100C2C8B3 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7F84AB1DEC67BA00C2C8B3 /* Speech.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		FC21D8E51DED6CBA0059D1DF /* AwesomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeButton.swift; sourceTree = "<group>"; };
 		FC21D8E61DED6CBA0059D1DF /* SpeechToTextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextVC.swift; sourceTree = "<group>"; };
 		FC21D8EA1DED6CE30059D1DF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		FC4FD0271DEDADC90087BE9E /* testAudio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = testAudio.m4a; sourceTree = "<group>"; };
 		FC7F84AB1DEC67BA00C2C8B3 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				FC21D8E41DED6CBA0059D1DF /* AudioToTextVC.swift */,
+				FC4FD0271DEDADC90087BE9E /* testAudio.m4a */,
 				FC21D8E51DED6CBA0059D1DF /* AwesomeButton.swift */,
 				FC21D8EA1DED6CE30059D1DF /* MainVC.swift */,
 				FC21D8E61DED6CBA0059D1DF /* SpeechToTextVC.swift */,
@@ -268,6 +271,7 @@
 				FC21D8E31DED6C840059D1DF /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				FC4FD0281DEDADC90087BE9E /* testAudio.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

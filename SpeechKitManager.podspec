@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SpeechKitManager'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'Audio to Text, Speech to Text made easy with SpeechKitManager.'
 
 # This description is used to generate tags and improve search results.
@@ -34,6 +34,6 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit','Speech'
+  # s.frameworks = 'UIKit','Speech'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
