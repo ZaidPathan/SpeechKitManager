@@ -106,8 +106,9 @@ ____
     import SpeechKitManager
 ##### Step 1: As permission to access speech recognition to user
 
-
-    speechKitManager?.requestSpeechRecognizerAuth({ authStatus in
+    fileprivate var skManager:SpeechKitManager?
+        
+    skManager?.requestSpeechRecognizerAuth({ authStatus in
                 /*
                  The callback may not be called on the main thread. Add an
                  operation to the main queue to update the record button's state.
