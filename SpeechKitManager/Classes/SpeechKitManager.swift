@@ -35,7 +35,10 @@ open class SpeechKitManager:NSObject {
     
     private var recognitionTask: SFSpeechRecognitionTask?
     
-    override init() {
+//    public convenience override init?(){
+//    
+//    } // Returns speech recognizer with user's current locale, or nil if is not supported
+    public override init() {
         super.init()
         speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: locale))
         speechRecognizer?.delegate = self
