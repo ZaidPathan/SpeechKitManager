@@ -142,7 +142,7 @@ ____
             })
 
 ##### Step 3: Record live audio and get speech in text format
-    fileprivate func recordAudio(){
+    fileprivate func recognize(){
             skManager?.record(resultHandler: { (result, error) in
             var isFinal = false
             
