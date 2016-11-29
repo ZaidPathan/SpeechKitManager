@@ -28,7 +28,7 @@ pod "SpeechKitManager"
 ```
 # Easy to Use
 ___
-> Note: Add `NSSpeechRecognitionUsageDescription` to `info.plist`
+> Note: Add `NSSpeechRecognitionUsageDescription` and `NSMicrophoneUsageDescription` to `info.plist`
 #### 1. Audio file to Text
 
     import SpeechKitManager
