@@ -28,6 +28,7 @@ pod "SpeechKitManager"
 ```
 # Easy to Use
 ___
+> Note: Add `NSSpeechRecognitionUsageDescription` and `NSMicrophoneUsageDescription`(For Speech to Text only) to `info.plist`
 
 #### 1. Audio file to Text
 
@@ -105,7 +106,6 @@ Optionally, you can play,pause or stop audio file.
 
 ____
 #### 2. Live Speech to Text
-> Note: Add `NSSpeechRecognitionUsageDescription` and `NSMicrophoneUsageDescription` to `info.plist`
 
     import SpeechKitManager
 ##### Step 1: As permission to access speech recognition to user
