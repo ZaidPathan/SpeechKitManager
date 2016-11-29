@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SpeechKitManager'
-  s.version          = '0.1.3'
-  s.summary          = 'Development is in progress.'
+  s.version          = '0.1.4'
+  s.summary          = 'Audio to Text, Speech to Text made easy with SpeechKitManager.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'Development is in progress. Please wait.'
+  s.description      = 'Audio to Text, Speech to Text made easy with SpeechKitManager. Find more on GiHub page.'
   s.homepage         = 'https://github.com/ZaidPathan/SpeechKitManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dr9-CB-rgm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio To TextVC-->
+        <scene sceneID="Qyz-rs-Uo2">
+            <objects>
+                <viewController storyboardIdentifier="AudioToTextVC" automaticallyAdjustsScrollViewInsets="NO" id="7I0-Yl-QRY" customClass="AudioToTextVC" customModule="SpeechKitManager_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WZg-nj-9qo"/>
+                        <viewControllerLayoutGuide type="bottom" id="coO-J2-gk5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i6X-x1-VLM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Er-iw-B7M" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7UZ-PV-OIZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="jWc-7C-JUC"/>
+                                </constraints>
+                                <state key="normal" title="Audio To Text">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="IBActionAudioToText:" destination="7I0-Yl-QRY" eventType="touchUpInside" id="TCM-Zm-llW"/>
+                                    <action selector="IBActionAudioToText:" destination="QUo-4c-8nx" eventType="touchUpInside" id="kvz-BA-eWc"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-iN-lY7">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7I0-Yl-QRY" id="Lsl-AK-29E"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIG-3l-IBe" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                                <state key="normal" title="Play Audio">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="IBActionPlayAudio:" destination="7I0-Yl-QRY" eventType="touchUpInside" id="nVn-0Y-ywJ"/>
+                                    <action selector="IBActionSpeechToText:" destination="QUo-4c-8nx" eventType="touchUpInside" id="q8m-GP-q0U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIl-tU-g1S" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                                <state key="normal" title="Stop Audio">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="IBActionPlayAudio:" destination="7I0-Yl-QRY" eventType="touchUpInside" id="k2u-Ya-9Wa"/>
+                                    <action selector="IBActionSpeechToText:" destination="QUo-4c-8nx" eventType="touchUpInside" id="ucg-Fh-U0C"/>
+                                    <action selector="IBActionStopAudio:" destination="7I0-Yl-QRY" eventType="touchUpInside" id="VNv-sl-n1y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Er-iw-B7M" firstAttribute="top" secondItem="IIl-tU-g1S" secondAttribute="bottom" constant="21" id="1JC-OI-b36"/>
+                            <constraint firstAttribute="trailing" secondItem="7xy-iN-lY7" secondAttribute="trailing" id="4ty-oe-qeo"/>
+                            <constraint firstItem="7xy-iN-lY7" firstAttribute="leading" secondItem="i6X-x1-VLM" secondAttribute="leading" id="53U-LH-EhM"/>
+                            <constraint firstItem="tIG-3l-IBe" firstAttribute="trailing" secondItem="4Er-iw-B7M" secondAttribute="trailing" id="5Dq-2f-ano"/>
+                            <constraint firstItem="4Er-iw-B7M" firstAttribute="centerX" secondItem="i6X-x1-VLM" secondAttribute="centerX" id="6gk-V0-grR"/>
+                            <constraint firstItem="coO-J2-gk5" firstAttribute="top" secondItem="4Er-iw-B7M" secondAttribute="bottom" constant="20" id="Fip-6J-E9M"/>
+                            <constraint firstItem="tIG-3l-IBe" firstAttribute="top" secondItem="7xy-iN-lY7" secondAttribute="bottom" constant="10" id="JEK-fW-qCt"/>
+                            <constraint firstItem="tIG-3l-IBe" firstAttribute="leading" secondItem="4Er-iw-B7M" secondAttribute="leading" id="QGA-t8-0fN"/>
+                            <constraint firstItem="IIl-tU-g1S" firstAttribute="height" secondItem="tIG-3l-IBe" secondAttribute="height" id="Rvc-nl-Zpr"/>
+                            <constraint firstItem="4Er-iw-B7M" firstAttribute="height" secondItem="tIG-3l-IBe" secondAttribute="height" id="feb-43-SPC"/>
+                            <constraint firstItem="IIl-tU-g1S" firstAttribute="leading" secondItem="4Er-iw-B7M" secondAttribute="leading" id="mWC-94-d3b"/>
+                            <constraint firstItem="7xy-iN-lY7" firstAttribute="top" secondItem="WZg-nj-9qo" secondAttribute="bottom" id="q6c-P7-AcJ"/>
+                            <constraint firstItem="IIl-tU-g1S" firstAttribute="top" secondItem="tIG-3l-IBe" secondAttribute="bottom" constant="25" id="z1Y-pk-N2j"/>
+                            <constraint firstItem="IIl-tU-g1S" firstAttribute="trailing" secondItem="4Er-iw-B7M" secondAttribute="trailing" id="za6-4y-0kl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aCI-RG-Nub">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sQZ-3w-RFb" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                            <rect key="frame" x="122.5" y="2" width="130" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Audio to text">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="IBActionTitle:" destination="7I0-Yl-QRY" eventType="touchUpInside" id="MNE-bW-MhZ"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="IBtxtView" destination="7xy-iN-lY7" id="gI9-BG-e3o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6l-oH-7hT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-353.07346326836586"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="T8y-s5-eQ8">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" id="QUo-4c-8nx" customClass="MainVC" customModule="SpeechKitManager_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IfN-1t-p95"/>
+                        <viewControllerLayoutGuide type="bottom" id="UAS-x2-AeT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIo-WK-id9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mme-QU-e3F" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0Vy-h2-n4b"/>
+                                    <constraint firstAttribute="width" constant="250" id="x6K-PY-SFd"/>
+                                </constraints>
+                                <state key="normal" title="Speech to Text">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="IBActionSpeechToText:" destination="QUo-4c-8nx" eventType="touchUpInside" id="zrm-wN-nhV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP4-id-69i" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZvE-MX-1M2"/>
+                                </constraints>
+                                <state key="normal" title="Audio to Text">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="IBActionAudioToText:" destination="QUo-4c-8nx" eventType="touchUpInside" id="jtm-sK-hKP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eP4-id-69i" firstAttribute="width" secondItem="mme-QU-e3F" secondAttribute="width" id="1lA-Vm-2yh"/>
+                            <constraint firstItem="mme-QU-e3F" firstAttribute="centerX" secondItem="eIo-WK-id9" secondAttribute="centerX" id="80P-Q6-Q6J"/>
+                            <constraint firstItem="eP4-id-69i" firstAttribute="top" secondItem="mme-QU-e3F" secondAttribute="bottom" constant="40" id="9VS-Ay-MeB"/>
+                            <constraint firstItem="mme-QU-e3F" firstAttribute="centerY" secondItem="eIo-WK-id9" secondAttribute="centerY" multiplier="0.7" id="RzV-ac-SsW"/>
+                            <constraint firstItem="eP4-id-69i" firstAttribute="centerX" secondItem="eIo-WK-id9" secondAttribute="centerX" id="fKa-Az-MKh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jBU-EV-ufP">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8uy-i2-u9w" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                            <rect key="frame" x="123" y="2" width="130" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="SpeechKit">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SpeechToTextVC" id="U3q-wn-m12"/>
+                        <segue destination="7I0-Yl-QRY" kind="show" identifier="AudioToTextVC" id="ixM-vJ-gqN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cef-94-qtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.2" y="4.9475262368815596"/>
+        </scene>
+        <!--Speech To TextVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SpeechToTextVC" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="SpeechToTextVC" customModule="SpeechKitManager_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="prE-ge-ovy">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xe-MP-Nm9" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                                <state key="normal" title="Start Recording!">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugn-XV-Kkw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7xe-MP-Nm9" firstAttribute="top" secondItem="prE-ge-ovy" secondAttribute="bottom" constant="8" id="8KE-3r-LRJ"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Bm5-tl-107"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7xe-MP-Nm9" secondAttribute="bottom" constant="20" id="EZf-x0-sxf"/>
+                            <constraint firstItem="7xe-MP-Nm9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FDx-qi-xq2"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OQc-uv-6Eu"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="P4r-Ub-aGz"/>
+                            <constraint firstItem="7xe-MP-Nm9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WKN-QJ-gpj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qg0-Pb-02T">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZWB-wV-tiT" customClass="AwesomeButton" customModule="SpeechKitManager_Example" customModuleProvider="target">
+                            <rect key="frame" x="119" y="2" width="138" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Speech To Text">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recordButton" destination="7xe-MP-Nm9" id="WtH-Dp-x5U"/>
+                        <outlet property="textView" destination="prE-ge-ovy" id="xF3-eW-DoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="394.45277361319341"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eyO-5S-u72">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dr9-CB-rgm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPe-t9-4uT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QUo-4c-8nx" kind="relationship" relationship="rootViewController" id="fYV-bt-aBV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyc-xD-1yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-791.20000000000005" y="-2.2488755622188905"/>
+        </scene>
+    </scenes>
+</document>

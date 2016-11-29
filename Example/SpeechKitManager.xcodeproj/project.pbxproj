@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		66704C545B35FA1543FCD99B /* Pods_SpeechKitManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5F551608F5D616932C385B /* Pods_SpeechKitManager_Example.framework */; };
 		852FB1645C1DA8CB1B0329BA /* Pods_SpeechKitManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9233ACCA4566F17D7A57C40 /* Pods_SpeechKitManager_Tests.framework */; };
+		FC21D8E31DED6C840059D1DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC21D8E21DED6C840059D1DF /* Main.storyboard */; };
+		FC21D8E71DED6CBA0059D1DF /* AudioToTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21D8E41DED6CBA0059D1DF /* AudioToTextVC.swift */; };
+		FC21D8E81DED6CBA0059D1DF /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21D8E51DED6CBA0059D1DF /* AwesomeButton.swift */; };
+		FC21D8E91DED6CBA0059D1DF /* SpeechToTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21D8E61DED6CBA0059D1DF /* SpeechToTextVC.swift */; };
+		FC21D8EB1DED6CE30059D1DF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21D8EA1DED6CE30059D1DF /* MainVC.swift */; };
 		FC7F84AC1DEC67BA00C2C8B3 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7F84AB1DEC67BA00C2C8B3 /* Speech.framework */; };
 		FC7F84B01DEC681100C2C8B3 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7F84AB1DEC67BA00C2C8B3 /* Speech.framework */; };
 /* End PBXBuildFile section */
@@ -39,8 +42,6 @@
 		607FACD01AFB9204008FA782 /* SpeechKitManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechKitManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SpeechKitManager_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechKitManager_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +50,11 @@
 		B9233ACCA4566F17D7A57C40 /* Pods_SpeechKitManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeechKitManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AB3516AD4A4CFD9AD99305 /* SpeechKitManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SpeechKitManager.podspec; path = ../SpeechKitManager.podspec; sourceTree = "<group>"; };
 		EA5F551608F5D616932C385B /* Pods_SpeechKitManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeechKitManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC21D8E21DED6C840059D1DF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FC21D8E41DED6CBA0059D1DF /* AudioToTextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioToTextVC.swift; sourceTree = "<group>"; };
+		FC21D8E51DED6CBA0059D1DF /* AwesomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeButton.swift; sourceTree = "<group>"; };
+		FC21D8E61DED6CBA0059D1DF /* SpeechToTextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextVC.swift; sourceTree = "<group>"; };
+		FC21D8EA1DED6CE30059D1DF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FC7F84AB1DEC67BA00C2C8B3 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -109,8 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				FC21D8E41DED6CBA0059D1DF /* AudioToTextVC.swift */,
+				FC21D8E51DED6CBA0059D1DF /* AwesomeButton.swift */,
+				FC21D8EA1DED6CE30059D1DF /* MainVC.swift */,
+				FC21D8E61DED6CBA0059D1DF /* SpeechToTextVC.swift */,
+				FC21D8E21DED6C840059D1DF /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -256,7 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				FC21D8E31DED6C840059D1DF /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -369,8 +378,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				FC21D8EB1DED6CE30059D1DF /* MainVC.swift in Sources */,
+				FC21D8E91DED6CBA0059D1DF /* SpeechToTextVC.swift in Sources */,
+				FC21D8E71DED6CBA0059D1DF /* AudioToTextVC.swift in Sources */,
+				FC21D8E81DED6CBA0059D1DF /* AwesomeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,14 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -540,6 +544,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,6 +562,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

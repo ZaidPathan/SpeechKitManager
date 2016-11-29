@@ -46,6 +46,10 @@ open class SpeechKitManager:NSObject {
         SFSpeechRecognizer.requestAuthorization(handler)
     }
     
+    open func requestMicAuth(_ handler:@escaping (Bool)->Swift.Void){
+        AVAudioSession.sharedInstance().requestRecordPermission(handler)
+    }
+    
     
     open func recognizeAudio(atURL:URL,resultHandler: @escaping (SFSpeechRecognitionResult?, Error?) -> Swift.Void){
         speechRecognizer?.delegate = self
