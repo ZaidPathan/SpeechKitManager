@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SpeechKitManager'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'Audio to Text, Speech to Text made easy with SpeechKitManager.'
 
 # This description is used to generate tags and improve search results.
