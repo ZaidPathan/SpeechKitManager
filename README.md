@@ -23,7 +23,7 @@ Device  : Real iOS device required
 SpeechKitManager is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```swift
 pod "SpeechKitManager"
 ```
 
@@ -34,6 +34,8 @@ pod "SpeechKitManager"
 ##### Initialize SpeechKitManager and your audio file path and URL
 
 ```swift
+import SpeechKitManager
+
 fileprivate var speechKitManager:SpeechKitManager?
 let audioPath = Bundle.main.path(forResource: "testAudio", ofType: "m4a")   //For audio file to text
 var audioURL:URL?                                                           //For audio file to text
