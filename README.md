@@ -11,8 +11,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 XCode   : 8.0 +
+
 iOS     : 10.0 +
+
 Swift   : 3.0 +
+
 Device  : Real iOS device required
 
 ## Installation
@@ -124,7 +127,7 @@ fileprivate func recognize(){
 }
 ```
 
-Awesome 🙌, look as the demo project - everything explained here is implemented in that.
+Awesome 🙌, look at the demo project - everything explained here is implemented in that.
 
 ## Author
 
