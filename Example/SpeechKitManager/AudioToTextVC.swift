@@ -19,8 +19,6 @@ class AudioToTextVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         speechKitManager = SpeechKitManager()
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,36 +53,34 @@ class AudioToTextVC: UIViewController {
             OperationQueue.main.addOperation {
                 switch authStatus {
                 case .authorized:
-                    if let path = self.audioPath{
-                        self.speechKitManager?.recognizeAudio(atURL: URL(fileURLWithPath: path), resultHandler: { (result, error) in
-                            if let result = result{
-                                self.IBtxtView.text = result.bestTranscription.formattedString
-                            }else if let error = error{
-                                debugPrint(error.localizedDescription)
-                            }
-                        })
-                    }else{
-                        
-                    }
-                    
+                    self.recognizeAudio()
                     print("requestSpeechRecognizerAuth authorized")
-                    break
                 case .denied:
                     print("requestSpeechRecognizerAuth denied")
-                    break
                 case .restricted:
                     print("requestSpeechRecognizerAuth restricted")
-                    break
                 case .notDetermined:
                     print("requestSpeechRecognizerAuth notDetermined")
-                    break
                 }
             }
-            
         }
     }
     
-    
+    fileprivate func recognizeAudio(){
+        if let path = self.audioPath{
+            self.speechKitManager?.recognizeAudio(atURL: URL(fileURLWithPath: path), resultHandler: { (result, error) in
+                if let result = result{
+                    //Audio to Text fall here
+                    self.IBtxtView.text = result.bestTranscription.formattedString
+                }else if let error = error{
+                    debugPrint(error.localizedDescription)
+                }
+            })
+        }else{
+            debugPrint("no path found")
+        }
+    }
+
     @IBAction func IBActionStopAudio(_ sender: AnyObject) {
         speechKitManager?.stopAudio()
     }

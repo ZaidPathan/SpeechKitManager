@@ -48,8 +48,13 @@ public class SpeechToTextVC: UIViewController {
     // MARK: Interface Builder actions
     
     @IBAction func recordButtonTapped() {
+        authorizeMicAccess()
+    }
+    
+    fileprivate func authorizeMicAccess(){
         speechKitManager?.requestMicAuth({ (granted) in
             if granted{
+                //Mic access granted start recognition
                 self.recognize()
             }else{
                 debugPrint("Microphone permission required")
